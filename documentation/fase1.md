@@ -1,7 +1,7 @@
 
 ---
 
-# ✅ **FASE 1 (AMPLIADA) — Análisis exhaustivo de API-Football v3 y modelado de dominio Django**
+# ✅ **FASE 1 — Análisis exhaustivo de API-Football v3 y modelado de dominio Django**
 
 ---
 
@@ -324,7 +324,7 @@ Una Standing pertenece a una Team, una League y una Season
 
 Hay una entrada por equipo en cada jornada/clasificación
 
-## ✅ Conclusiones de FASE 1 (Revisión técnica final v3)
+## ✅ Resultados de FASE 1
 
 | Aspecto               | Estado |
 |------------------------|--------|
