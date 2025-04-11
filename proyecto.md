@@ -253,6 +253,76 @@ Country ───< League ───< Season ───< Fixture ──> Venue
 ```
 
 ---
+### 1. Country (País)
+Un país es la entidad base que agrupa varias ligas y equipos.
+📌 Ejemplo: Inglaterra ➜ Premier League, Manchester United, Liverpool...
+
+Relación:
+
+Un Country puede tener muchas Leagues
+
+Un Country puede tener muchos Teams
+
+### 2. League (Liga o Copa)
+Cada liga pertenece a un país.
+📌 Ejemplo: La Premier League pertenece a Inglaterra
+
+Relación:
+
+Una League pertenece a un Country (ForeignKey)
+
+Una League tiene muchas Seasons (temporadas)
+
+### 3. Season (Temporada)
+Cada liga se juega durante múltiples temporadas.
+📌 Ejemplo: Premier League 2022, Premier League 2023, etc.
+
+Relación:
+
+Una Season pertenece a una League
+
+Una Season contiene muchos Fixtures (partidos)
+
+### 4. Team (Equipo)
+Cada equipo pertenece a un país, y juega en ligas durante distintas temporadas.
+📌 Ejemplo: Liverpool pertenece a Inglaterra y juega la Premier League 2023
+
+Relación:
+
+Un Team pertenece a un Country
+
+Un Team puede aparecer en muchos Fixtures (como local o visitante)
+
+Un Team tiene una Standing por cada temporada/league combinada
+
+### 5. Fixture (Partido)
+Un partido es el evento central del sistema: dos equipos, una liga, una temporada, un resultado, una fecha.
+
+Relaciones:
+
+Un Fixture pertenece a una Season y a una League
+
+Tiene un home_team y un away_team (ambos son Team)
+
+Puede tener un Venue (estadio del partido)
+
+### 6. Venue (Estadio)
+Los estadios se pueden vincular tanto a los equipos como a los partidos.
+
+Relación:
+
+Un Venue puede usarse en varios Fixtures
+
+Opcionalmente, puede asociarse a un Team (como estadio local)
+
+### 7. Standing (Clasificación)
+Representa la posición de un equipo en una temporada específica.
+
+Relación:
+
+Una Standing pertenece a una Team, una League y una Season
+
+Hay una entrada por equipo en cada jornada/clasificación
 
 ## ✅ Conclusiones de FASE 1 (Revisión técnica final v3)
 
