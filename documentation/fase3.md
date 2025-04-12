@@ -185,8 +185,6 @@ python manage.py migrate
 
 ---
 
-¡Perfectísimo! 🎁 Vamos a dejar bien pulido el **panel de administración Django**, porque como buen desarrollador full-stack, hay que tener siempre una buena vista de los datos desde el admin 🧑‍💼
-
 Voy a agregarte **todos los modelos de todas las apps** (`leagues`, `teams`, `fixtures`, `standings`) con sus respectivas configuraciones en el `admin.py`. Lo haremos de forma **profesional y legible**, con `list_display`, `search_fields`, y `list_filter` cuando sea útil.
 
 ---
